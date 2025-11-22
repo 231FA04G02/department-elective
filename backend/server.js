@@ -23,6 +23,10 @@ if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
 
+app.get("/",(req,res)=>{
+  res.send("backend is working");
+})
+
 
 // Routes
 app.use("/api/auth", authRoutes);
